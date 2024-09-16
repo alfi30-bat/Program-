@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.navbar {
+    overflow: hidden;
+    background-color: azure;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 3;
+    
+    box-shadow: 0 4px 10px #0000001a;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    color: #e62bf0;
+    text-align: center;
+    padding: 1.6%;
+    text-decoration: none;
+    font-size: 2vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    
+    color: black;
+    text-decoration: underline;
+    box-shadow: none;
+}
+.navbar2{
+    text-align: center;
+    padding: 1%;
+    text-decoration: none;
+    font-size: 1vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+.navbar2 button{
+    border: #04AA6D;
+    color: #04AA6D;
+    background-color: white;
+    text-decoration: none;
+    padding: 1%;
+    margin-left: 1%;
+    border-radius: 6px;
+}
+.navbar2 button:hover {
+    border: #04AA6D;
+    background-color: #04AA6D;
+    color: white;
+    text-decoration: none;
+
+}
+.mid{
+    width:17vw; 
+    background-color: white; 
+    padding: 36%; 
+    text-align: center; 
+    box-shadow: 6px 6px 5px #f5f5f5ef; 
+    border-radius: 10%;
+}
+.bt{
+    background-color: white; 
+    border-radius: 10px; 
+    padding: 4%; 
+    border-color: green;
+}
+.bt:hover{
+    background-color: green;
+    animation-name: fadein;
+}
+
+.bt2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.bt2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.bt2:hover span {
+  padding-right: 25px;
+}
+
+.bt2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<body onload="arrange()">
+    <div class="navbar">
+        <a href="{% url 'content:main' %}">home</a>     
+        <a href="{% url 'register' %}">service</a>    
+        <a href="{% url 'content:main' %}">testimonial</a>     
+        <a href="{% url 'register' %}">product</a>  
+        <a href="{% url 'content:main' %}">feature</a>     
+        <a href="{% url 'register' %}">FAQs</a>  
+        <div class="navbar2">
+            <button href="{% url 'content:main' %}">Login</button>     
+            <button href="{% url 'register' %}">Sign Up</button>  
+        </div>                        
+    </div>  
+<div style="margin-top: 5%;">
+    <div style="display: flex; justify-content: center; background-color: #f5f5f5ef; padding: 6%;">
+        <div style="float: left;">
+            <h1>Lessons and insights</h1>
+            <h1>From 8 years</h1>
+            <p>where togrow ypur business as a photographer or social media?</p>
+            <button class="bt">registaer</button>
+        </div>
+        <img src="main1.png" height="30%" width="30%" alt="tech">
+    </div>
+    <div style="text-align: center;">
+        <h3>our clients</h3>
+        <p>you have been working with some fortne 599+ clients</p>
+        <div style="display: flex; margin: 4%; justify-content: space-evenly;">
+            <img src="icon.png" width="30px" height="30px" style="float: left; margin-left: 3%;">
+            <img src="icon.png" width="30px" height="30px" style="float: left; margin-left: 3%;">
+            <img src="icon.png" width="30px" height="30px" style="float: left; margin-left: 3%;">
+            <img src="icon.png" width="30px" height="30px" style="float: left; margin-left: 3%;">
+            <img src="icon.png" width="30px" height="30px" style="float: left; margin-left: 3%;">
+            <img src="icon.png" width="30px" height="30px" style="float: left; margin-left: 3%;">
+            <img src="icon.png" width="30px" height="30px" style="float: left; margin-left: 3%;">
+            <img src="icon.png" width="30px" height="30px" style="float: left; margin-left: 3%;">
+        </div>        
+        <div style="text-align: center;">
+        <h3 style="width: 10%; overflow: visible;">manage your entire comunity in one place</h3>
+        <p>who deserve us</p>
+        </div>
+    </div>
+    <div style="display: grid; gap: 20vw; grid-template-columns: repeat(3, 2vw); margin: 20%;">
+        <div class="mid">
+            <img src="icon.png" width="30px" height="30px">
+            <h3>Major and the minor</h3>
+            <p>let me haveanly peace peace the cry</p>
+        </div>
+        <div class="mid">
+            <img src="icon.png" width="30px" height="30px">
+            <h3>Major and the minor</h3>
+            <p>let me haveanly peace peace the cry</p>
+        </div>
+        <div  class="mid">
+            <img src="icon.png" width="30px" height="30px">
+            <h3>Major and the minor</h3>
+            <p>let me haveanly peace peace the cry</p>
+        </div>        
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <img src="main2.png" style="float: left; width: 31%; height: 20%;">
+        <div style="width: 30vw; margin-left: 3%;">
+            <h2>how to design a site footer like we did</h2>
+            <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+            <button style="background-color: green; border-radius: 10px; padding: 4%; border: none;">regisger</button>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: center; margin-top: 10%;margin-bottom: 10%; background-color:#f5f5f5ef ;padding: 5%;">
+        <img src="main3.png" style="float: left; width: 31%; height: 20%;">
+        <div style="width: 37vw; margin-left: 3%;">
+            <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+            <h2 style="color: #04AA6D;">Tim smith</h2>
+            <p>british dragon bpat racing</p>
+            <div>
+                <img src="icon.png" width="30px" height="30px" style="float: left; margin-left: 1%;">
+                <img src="icon.png" width="30px" height="30px" style="float: left; margin-left: 1%;">
+                <img src="icon.png" width="30px" height="30px" style="float: left;margin-left: 1%;">
+                <img src="icon.png" width="30px" height="30px" style="float: left; margin-left: 1%;">
+                <p class="bt2" style="color: #04AA6D; margin-left: 1%;"><span>meet all our custmers</span></p>
+
+            </div>
+        </div>
+    </div>
+    <div>
+        <div style="text-align: center;">
+        <h3>Caring is the new marketing</h3>
+        <p style="width: 10vw;">Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 100px;text-align: center;" onscroll="arrange()">
+            <div>
+                <img id="im1" src="icon.png" width="150px" height="150px">
+                <div id="box" style="animation-duration: 4s; animation-name: inn; width: 20%; background-color: yellow; position: absolute; padding: 1%; border-radius: 10px; box-shadow: 10px 10px white;">
+                    <p style="font-size: 2vw;">Epcot is a theme park at Walt Disney World Resort featuring exciting attractions.</p>
+                    <button onclick="arrange()" class="bt2 bt"><span>register</span></button>
+                </div>
+            </div>
+            <div>
+                <img src="icon.png" width="3vw" height="150px">
+            </div>
+            
+        </div>
+
+    </div>
+    <div style="text-align: center;">
+        <h1>wanna try our appp</h1>
+        <button style="background-color: green; border-radius: 6px; padding: 2%; border: none; color: white; font-size: 2vw; margin-bottom: 10%;">regisger</button>
+ 
+    </div>
+    <div style="background-color: black; color: white; height: 9vw;padding: 6%; padding-top: 1%; justify-content: space-evenly;display: flex; position: absolute; left: 0; right: 0;">
+       <div style="font-size: 0.9vw; float: left; padding: 6%;">
+        logo
+        <p> copyright claim</p>
+       </div> 
+        <div style="font-size: 0.9vw; float: left; padding-left: 5%;padding-right: 5%;">
+            <p style="font-size: 1vw;">companny</p>
+            <p>blog</p>
+            <p>about us</p>
+            <p>blog</p>
+            <p>procing</p>
+            <p>testimonials</p>
+        </div>
+        <div style="font-size: 0.9vw; float: left;">
+            <p style="font-size: 1vw;">companny</p>
+            <p>blog</p>
+            <p>about us</p>
+            <p>blog</p>
+            <p>procing</p>
+            <p>testimonials</p>
+        </div>
+        <div>
+            <p style="font-size: 1vw;">stay up to date</p>
+
+        </div>
+    </div>
+</div>
+</body>
+
+<script>
+function arrange(){
+    let element = document.getElementById("im1");
+let x = element.offsetLeft;
+let y = element.offsetTop;
+console.log("Element X: " + x);
+console.log("Element Y: " + y);
+let elemen = document.getElementById("box");
+elemen.style.left = x +20 +"px"
+elemen.style.top = y +70+ "px"
+elemen.style.animationName = "inn"
+
+style = document.createElement("style")
+style.innerHTML = " @keyframes inn {0%   {background-color:none; left:"+y+"px; top:"+ x +"px;}100% {background-color:none; left:"+y +20+"px; top:"+ x+70 +"px;}}"     
+document.head.appendChild(style);   
+
+}
+</script>
+
+</html>
